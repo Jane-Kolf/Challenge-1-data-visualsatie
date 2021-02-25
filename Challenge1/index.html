@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Challenge 1 Datavisualisatie</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" href="style.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+		<!--Javascript-->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#" class="logo">
+						<h1>Space X</h1>
+						<figcaption>Dashboard</figcaption>
+					</a>
+				</li>
+				<li><a href="#voertuig">Voertuig</a></li>
+				<li><a href="#omgeving">Omgeving</a></li>
+				<li><a href="#voorraden">Voorraden</a></li>
+				<li><a href="#tools">Tools</a></li>
+				<li><a href="#overig">Overig</a></li>
+			</ul>
+		</nav>
+        <a href="#" class="logo_mobiel">
+			<h1>Space X</h1>
+			<figcaption>Dashboard</figcaption>
+		</a>
+		<hr>
+		<main>
+			<p>
+				Het doel van het dashboard is om informatie over de reis te geven en
+				reizigers voor te bereiden op aankomende aankomst op Mars
+			</p>
+			<br>
+			<div class="image"></div>
+			<div id="voertuig">
+				<h2>🚀Voertuig informatie</h2>
+				<div class="flex-container">
+					<div class="brandstof">
+						<h3>Brandstof⛽</h3>
+						<div>
+							<canvas id="brandstof">
+								<script src="brandstof.js"></script>
+							</canvas>
+						</div>
+						<p>Meer info</p>
+					</div>
+					<div class="Acceleratie">
+						<h3>Acceleratie⚙️</h3>
+						<div>
+							<canvas id="acceleratie">
+								<script src="#"></script>
+							</canvas>
+						</div>
+							<p>Meer info</p>
+					</div>
+					<div class="Snelheid">
+						<h3>Snelheid💨</h3>
+						<div></div>
+							<p>Meer info</p>
+					</div>
+					<div class="G-Force">
+						<h3>G-force💥</h3>
+						<div></div>
+							<p>Meer info</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="omgeving">
+				<h2>🛰️Voertuig omgeving</h2>
+				<div class="flex-container">
+					<div id="zwaartekracht">
+						<h3>Zwaartekracht🌌</h3>
+						<div></div>
+							<p>Meer info</p>
+					</div>
+
+					<div class="tijd">
+						<h3>Afstand afgelegd over tijd⌛</h3>
+						<div></div>
+							<p>Meer info</p>
+					</div>
+					<div class="atmosfeer">
+						<h3>Atmosfeer☄️</h3>
+						<div></div>
+							<p>Meer info</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="voorraden">
+				<h2>🎒Voorraden</h2>
+				<div class="flex-container">
+					<div id="eten">
+						<h3>Eten🍞</h3>
+						<div></div>
+							<p>Meer info</p>
+					</div>
+					<div class="water">
+						<h3>Water💧</h3>
+						<div></div>
+							<p>Meer info</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="tools">
+				<h2>⚙️Tools</h2>
+				<div class="flex-container">
+					<div id="omzetten">
+						<h3>Zwaartekracht omzetten🛠️</h3>
+						<div></div>
+							<p>Meer info</p>
+					</div>
+					<div class="mars_afstand">
+						<h3>Mars naar aardse afstand omzetten🌎</h3>
+						<div></div>
+							<p>Meer info</p>
+					</div>
+				</div>
+			</div>
+			
+			<div id="overig">
+				<h2>👩‍🚀 Overig</h2>
+				<div class="flex-container">
+					<div id="verzorging">
+						<h3>Verzorging🚿</h3>
+						<div>
+							<canvas id="verzorging">
+								<script src="verzorging.js"></script>
+							</canvas>
+						</div>
+							<p>Meer info</p>
+					</div>
+					<div class="kleding">
+						<h3>Kleding👕</h3>
+						<div>
+							<canvas id="brandstof">
+								<script src="brandstof.js"></script>
+							</canvas>
+						</div>
+							<p>Meer info</p>
+					</div>
+					<div class="medicijnen">
+						<h3>Medicijnen💊</h3>
+						<div>
+							<canvas id="brandstof">
+								<script src="brandstof.js"></script>
+							</canvas>
+						</div>
+							<p>Meer info</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<i><p>&copy;Jk Designs</p></i>
+		</footer>
+	</body>
+</html>
