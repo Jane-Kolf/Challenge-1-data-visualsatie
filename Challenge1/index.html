@@ -13,6 +13,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
 		<!--Javascript-->
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<script src="javascript.js" defer></script>
     </head>
 	<body>
 		<nav>
@@ -22,10 +23,11 @@
 						<figcaption>Dashboard</figcaption>
 					</a>
 				</li>
-				<li><a href="#voertuig">Voertuig</a></li>
-				<li><a href="#omgeving">Omgeving</a></li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#voertuig">Voertuig </a></li>
+				<!--<li><a href="#omgeving">Omgeving</a></li>-->
 				<li><a href="#voorraden">Voorraden</a></li>
-				<li><a href="#tools">Tools</a></li>
+				<!--<li><a href="#tools">Tools</a></li>-->
 				<li><a href="#overig">Overig</a></li>
 			</ul>
 		</nav>
@@ -36,10 +38,18 @@
 		<hr>
 		<main>
 			<p>
-				Het doel van het dashboard is om informatie over de reis te geven en
-				reizigers voor te bereiden op aankomende aankomst op Mars
+				In september 2019 onthulde Elon Musk het Interplanetary Transport System (ITS).
+				De krachtigste raket die ooit is gebouwd. Een ruimteschip die is ontworpen om 
+				per vlucht minimaal 100 mensen naar de Rode Planeet te vervoeren.
+				<br>
+				<br>
+				In dit dashboard vind je informatie over de reis en reizigers om voor te 
+				bereiden op de aankomst op Mars. Ze krijgen een overzicht wat er op ruimteschip Space X gebeurd.
 			</p>
 			<br>
+			<div class="mensen">
+				<canvas id="myDoughnutChart"></canvas>
+			</div>
 			<div class="image"></div>
 			<div id="voertuig">
 				<h2>🚀Voertuig informatie</h2>
@@ -47,34 +57,24 @@
 					<div class="brandstof">
 						<h3>Brandstof⛽</h3>
 						<div>
-							<canvas id="brandstof">
-								<script src="brandstof.js"></script>
-							</canvas>
+							<canvas id="brandstof"></canvas>
 						</div>
-						<p>Meer info</p>
-					</div>
-					<div class="Acceleratie">
-						<h3>Acceleratie⚙️</h3>
-						<div>
-							<canvas id="acceleratie">
-								<script src="#"></script>
-							</canvas>
-						</div>
-							<p>Meer info</p>
+						<p>De brandstof van het voertuig is te zien in procenten waarbij de
+							de raket op een volle tank zit bij 100%.
+						</p>
 					</div>
 					<div class="Snelheid">
 						<h3>Snelheid💨</h3>
-						<div></div>
-							<p>Meer info</p>
-					</div>
-					<div class="G-Force">
-						<h3>G-force💥</h3>
-						<div></div>
-							<p>Meer info</p>
+						<div>
+							<canvas id="snelheid"></canvas>
+						</div>
+						<p>De snelheid van het voertuig is te zien in per 1000 kilometers.
+						</p>
 					</div>
 				</div>
 			</div>
-
+			<hr class="mid">
+<!-- Overige informatie
 			<div id="omgeving">
 				<h2>🛰️Voertuig omgeving</h2>
 				<div class="flex-container">
@@ -86,27 +86,6 @@
 
 					<div class="tijd">
 						<h3>Afstand afgelegd over tijd⌛</h3>
-						<div></div>
-							<p>Meer info</p>
-					</div>
-					<div class="atmosfeer">
-						<h3>Atmosfeer☄️</h3>
-						<div></div>
-							<p>Meer info</p>
-					</div>
-				</div>
-			</div>
-
-			<div id="voorraden">
-				<h2>🎒Voorraden</h2>
-				<div class="flex-container">
-					<div id="eten">
-						<h3>Eten🍞</h3>
-						<div></div>
-							<p>Meer info</p>
-					</div>
-					<div class="water">
-						<h3>Water💧</h3>
 						<div></div>
 							<p>Meer info</p>
 					</div>
@@ -128,42 +107,105 @@
 					</div>
 				</div>
 			</div>
+-->
+			<div id="voorraden">
+				<h2>🎒Voorraden</h2>
+				<div class="flex-container">
+					<div class="eten">
+						<h3>Eten🍞</h3>
+						<div>
+							<div>
+								<canvas id="voedsel"></canvas>
+								<h4>Voorraad meter 100 - 0 %📊</h4>
+								<div id="voorraadbalk">
+									<div id="goed"> 100%</div>
+									<div id="matig"> 30% </div>
+									<div id="slecht"> 15% </div>
+								</div>
+							</div>
+						</div>
+							<p>
+								Bekijk hoeveel eten er op voorraad is voor de hele bemanning.
+							</p>
+					</div>
+					<div class="water">
+						<h3>Water💧</h3>
+						<div>
+							<canvas id="watertank"></canvas>								
+						</div>
+						<p>
+							Bekijk hoeveel water er is in de watertank zit.
+							Je kan bereken hoveel water er is verdeeld over de mensen.
+						</p>
+					</div>
+				</div>
+			</div>
 			
 			<div id="overig">
 				<h2>👩‍🚀 Overig</h2>
 				<div class="flex-container">
-					<div id="verzorging">
+					<div class="verzorging">
 						<h3>Verzorging🚿</h3>
 						<div>
-							<canvas id="verzorging">
-								<script src="verzorging.js"></script>
-							</canvas>
+							<canvas id="verzorging"></canvas>
+							<h4>Voorraad meter 100 - 0 % 📊</h4>
+							<div id="voorraadbalk">
+								<div id="goed"> 100%</div>
+								<div id="matig"> 30% </div>
+								<div id="slecht"> 15% </div>
+							</div>
 						</div>
-							<p>Meer info</p>
+						<p>
+							De voorraad op de basis verzorgings producten die wordt meegenomen.
+						</p>
 					</div>
 					<div class="kleding">
 						<h3>Kleding👕</h3>
 						<div>
-							<canvas id="brandstof">
-								<script src="brandstof.js"></script>
-							</canvas>
+							<canvas id="kleding"></canvas>
+							<h4>Voorraad meter 100 - 0 %📊</h4>
+							<div id="voorraadbalk">
+								<div id="goed"> 100%</div>
+								<div id="matig"> 30% </div>
+								<div id="slecht"> 15% </div>
+							</div>
 						</div>
-							<p>Meer info</p>
+							<p>
+								De voorraad op (unisex) kleding voor de mannen en vrouwen die
+								wordt meegenomen.
+							</p>
 					</div>
 					<div class="medicijnen">
 						<h3>Medicijnen💊</h3>
 						<div>
-							<canvas id="brandstof">
-								<script src="brandstof.js"></script>
-							</canvas>
+							<canvas id="medicijnen"></canvas>
+							<h4>Voorraad meter 100 - 0 % 📊</h4>
+							<div id="voorraadbalk">
+								<div id="goed"> 100%</div>
+								<div id="matig"> 30% </div>
+								<div id="slecht"> 15% </div>
+							</div>
 						</div>
-							<p>Meer info</p>
+							<p>
+								De voorraad op medicijnen die wordt meegenomen in de ruimte.
+								Tegen pijn en misselijkheid.
+							</p>
+					</div>
+					<div class="speelgoed">
+						<h3>Speelgoed🪀</h3>
+						<div>
+							<canvas id="speelgoed"></canvas>
+						</div>
+							<p>
+								De voorraad op speelgoed dat wordt meegenomen tegen de verveling
+								en elkaar beter te leren kennen
+							</p>
 					</div>
 				</div>
 			</div>
 		</main>
 		<footer>
-			<i><p>&copy;Jk Designs</p></i>
+			<i><p>&copy;Jk Designs | Jané Kolf</p></i>
 		</footer>
 	</body>
 </html>

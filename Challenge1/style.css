@@ -6,7 +6,7 @@
     font-family: Typo_Round;
     src: url(Typo_Round_Regular_Demo.otf);
 }
-/*Mobiel width 375px (Iphone 6)*/
+/*Mobiel width 360px (Iphone 6)*/
 body{
     background-color: black;
     background-image: url('ruimte_achtergrond.jpg');
@@ -32,7 +32,7 @@ li a {
     display: block;
     color: #FF0057;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     padding-top: 20px;
     text-decoration: none;
     font-family: 'Varela Round', sans-serif;
@@ -78,6 +78,15 @@ figcaption{
 hr{
     width: 50%;
     margin: auto;
+    color: white;
+}
+
+.mid{
+    width: 50%;
+    margin: auto;
+    color: #FF0057;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 p{
@@ -126,7 +135,7 @@ h3{
 .flex-container > div > div {
     background-color: white;
     width: 80vw;
-    height: 30vh;
+    height: 35vh;
     margin-top: 5%;
     padding: 10px;
     border-radius: 15%;
@@ -140,7 +149,46 @@ i>p{
     font-family: Typo_Round;
 }
 
-/*Tablet width 768 x 672px (Ipad)*/
+#myDoughnutChart{
+    width:100%;
+    padding-bottom: 5%;
+}
+#voorraadbalk{
+    position: relative;
+    background-color: black;
+    margin: 5px;
+    overflow: hidden;
+    font-family: 'Varela Round', sans-serif;
+}
+#goed{
+    width: 55%;
+    background-color: #90FF9F;
+    height: 20px;
+    margin: 0%;
+    float: left;
+}
+#matig{
+    width: 30%;
+    background-color: #FF945F;
+    height: 20px;
+    margin: 0%;
+    float: left;
+
+}
+#slecht{
+    width: 15%;
+    background-color: #FF5454;
+    height: 20px;
+    margin: 0%;
+    float: left;
+}
+
+h4{
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+}
+
+/*Tablet width 768 x 1024px (Ipad)*/
 @media only screen and (min-width: 600px) {
 
 .flex-container {
@@ -153,8 +201,8 @@ div{
 }
 .flex-container > div > div {
     background-color: white;
-    width: 40vw;
-    height: 35vh;
+    width: 80vw;
+    height: 40vh;
     padding: 5px;
     padding-right: 2px;
 }
@@ -194,7 +242,7 @@ figcaption{
 .image{
     background-image: url('ruimteschip.jpg');
     background-size: 100%;
-    background-position: center bottom;
+    background-position: center ;
     background-attachment: fixed;
     height: 175px;
     display: block;
@@ -216,15 +264,39 @@ h1{
 h2{
 margin-top: 5%;
 margin-bottom: 2%;
+font-size: 200%;
 }
 h3{
-font-size: 120%;
+font-size: 150%;
 }
 
 div{
     margin: auto;
 }
-
+#myDoughnutChart{
+    padding-bottom: 5%;
+}
+#snelheidsbalk{
+    position: relative;
+    background-color: crimson;
+    margin: 30px;
+    overflow: hidden;
+}
+#balk{
+    width: 0px;
+    background-color: darkorange;
+    height: 20px;
+    margin: 0%;
+}
+}
+@media only screen and (min-width: 900px) {
+    .flex-container > div > div {
+        background-color: white;
+        width: 80vw;
+        height: 60vh;
+        padding: 5px;
+        padding-right: 2px;
+    }
 }
 @media only screen and (min-width: 1280px) {
 
@@ -239,7 +311,7 @@ div{
 .flex-container > div > div {
     background-color: white;
     width: 40vw;
-    height: 50vh;
+    height:55vh;
     padding: 5px;
     padding-right: 2px;
 }
@@ -254,17 +326,29 @@ h2{
     height: 250px;
     background-position: top;
 }
+
+.mensen{
+    width:50%;
+    padding-bottom: 5%;
 }
+#myDoughnutChart{
+    padding-bottom: 5%;
+}
+
 @media only screen and (min-width: 1920px) {
 
 .flex-container > div > div {
     background-color: white;
-    width: 20vw;
-    height: 30vh;
+    width: 35vw;
+    height: 45vh;
     padding: 5px;
     padding-right: 0px;
 }
-
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 nav{
     height: 120px;
 }
@@ -302,13 +386,9 @@ p{
 }
 h1{
     margin-top: 0%;
-    font-size: 200%;
+    font-size: 135%;
 }
 
 div{
     margin:auto;
-    padding: 15px;
-    display: inline-block;
-}
-
 }
